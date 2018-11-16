@@ -1,0 +1,408 @@
+body{
+  background-color: #272727;
+  font-family: arial;
+  overflow: hidden;
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+a:hover{
+  color: #cee002;
+}
+.container{
+  margin-right: 70px;
+  margin-left: 60px;
+  overflow: hidden;
+}
+nav.container{
+  width: 1220px;
+  height: 100px;
+  box-sizing: border-box;
+  padding-top: 30px;
+  background-color: #272727;
+  top: 0;
+}
+nav.container li{
+  float: left;
+}
+/*****************************ЛЕВЫЙ СЕКТОР НАВИГАЦИИ***************************/
+.brand{
+  position: relative;
+  float: left;
+  width: 780px;
+  height: 32px;
+}
+.logo:before{
+  content: "\25AC";
+  color: #272727;
+  display: block;
+  transform: rotate(-45deg) translate(-10px, -6px);
+}
+.logo{
+  display: block;
+  height: 22px;
+  width: 22px;
+  border: 5px solid white;
+}
+.first{
+  display: block;
+  position: relative;
+  font-size: 28px;
+  font-weight: bold;
+  width: 0;
+  height: 0;
+  top: -35px;
+  left: 45px;
+  color: white;
+}
+.brand li:first-child>a span:last-child{
+  display: block;
+  position: relative;
+  font-size: 13px;
+  width: 0;
+  height: 0;
+  color: grey;
+  top: -11px;
+  left: 45px;
+}
+.brand li:last-child{
+  float: right;
+  margin-top: 11px;
+}
+.brand li:last-child>a{
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+}
+.brand li:last-child>a>span{
+  color: grey;
+  text-transform: uppercase;
+}
+/**************************ПРАВЫЙ СЕТОР НАВИГАЦИИ******************************/
+.menu{
+  position: relative;
+  float: right;
+  height: 46px;
+  width: 400px;
+  border-left: 1px solid grey;
+  margin-top: -3px;
+}
+.menu li:first-child{
+  margin-left: 60px;
+  font-size: 22px;
+  margin-top: 10px;
+}
+.menu li:nth-child(2),li:nth-child(3),li:nth-child(4),li:last-child{
+  display: inline-block;
+  margin-top: 14px;
+  margin-left: 30px;
+  font-size: 18px;
+}
+/******************************************************************************/
+#side_menu_trigger{
+  font-size: 25px;
+  padding: 0;
+  background-color: #272727;
+  position: absolute;
+  right: 70px;
+  top: 37px;
+  border: 0;
+  color: white;
+}
+input{
+  opacity: 0;
+  font-size: 25px;
+  padding: 0;
+  width: 31px;
+  height: 55px;
+  background-color: #272727;
+  position: absolute;
+  z-index: 101;
+  right: 62px;
+  top: 19px;
+  border: 0;
+  color: white;
+  transition: 2s;
+}
+input:checked + .side_menu{
+  transform: translateX(-488px);
+
+}
+input:hover{
+  cursor: pointer;
+}
+/*********************************SIDE MENU************************************/
+.side_menu{
+  width: 488px;
+  height: 700px;
+  background-color: #272727;
+  box-sizing: border-box;
+  padding: 100px 70px 100px 70px;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: -488px;
+  display: block;
+  transition: 2s;
+}
+/******************************************************************************/
+.side_menu a{
+  color: grey;
+  font-family: arial;
+  text-decoration: none;
+}
+.side_menu li{
+  display: block;
+}
+.side_menu>.cross{
+  display: block;
+  position: absolute;
+  top: 22px;
+  right: 65px;
+  color: white;
+  font-size: 27px;
+}
+.side_menu a:hover{
+  color: #cee002;
+}
+.fa-times-thin:before {
+	content: '\00d7';
+}
+/******************************************************************************/
+.side_menu #lang{
+  height: 16px;
+}
+.side_menu #lang li{
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 0;
+  font-size: 15px;
+}
+.side_menu #lang li:first-child{
+  margin-left: 0;
+}
+/******************************************************************************/
+.side_menu #list{
+  overflow: scroll;
+  box-sizing: content-box;
+  height: 45%;
+  margin-top: 75px;
+  list-style: none;
+  display: block;
+}
+.side_menu #list #post{
+  margin-left: 20px;
+}
+.side_menu #list li:first-child{
+  margin-top: 0;
+}
+.side_menu #list li{
+  display: inline-block;
+  width: 100%;
+  margin-left: 0;
+  margin-top: 40px;
+}
+.side_menu #list li{
+
+}
+.side_menu #list a{
+  font-size: 40px;
+  font-weight: bold;
+}
+.side_menu #list a:hover{
+  color: white;
+}
+/******************************************************************************/
+.side_menu #social_networks{
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.side_menu #social_networks li:first-child{
+  margin-left: 0;
+}
+.side_menu #social_networks li{
+  display: inline;
+  margin-left: 35px;
+  margin-top: 0;
+}
+.side_menu #social_networks a{
+  font-size: 18px;
+}
+/******************************************************************************/
+.side_menu footer{
+  color: white;
+  font-family: arial;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 20px;
+}
+/******************************************************************************/
+/*****************************CAROUSEL CONTAINER*******************************/
+#carousel{
+  position: relative;
+}
+#carousel img{
+  width: 100%;
+  height: 100%;
+  min-width: 600px;
+  min-height: 400px;
+}
+/*****************************FIGCAPTION DEFAULT*******************************/
+#carousel figcaption{
+  position: absolute;
+  top: 13%;
+  left: 25%;
+  width: 170px;
+  height: 350px;
+  padding: 45px 30px 30px 35px;
+  box-sizing: border-box;
+}
+/*********************************FIGCAPTION FILL******************************/
+/********************************FIGCAPTION HEADER*****************************/
+#carousel figcaption h2{
+  position: relative;
+  overflow: hidden;
+  width: 85px;
+  height: 15px;
+  color: white;
+  font-family: arial;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px black;
+}
+#carousel figcaption h2>span{
+  position: relative;
+  right: -100px;
+  -webkit-animation: ease-out 2s header_anim;
+  animation-fill-mode: forwards;
+  animation-delay: 1.4s;
+}
+@-webkit-keyframes header_anim{
+  0%{letter-spacing: 10px;}
+  50%{letter-spacing: 6px;}
+  100%{ right: 0; letter-spacing: -0.5px;}
+}
+/*******************************FIGCAPTION DESCRIPTION*************************/
+#carousel figcaption p{
+  overflow: hidden;
+  position: relative;
+  left: 20px;
+  z-index: 1;
+  width: 300px;
+  margin-top: 20px;
+  color: white;
+  font-family: arial;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-shadow: 1px 1px 1px black;
+  -webkit-animation: ease-out 1s par_back_anim;
+  animation-fill-mode: forwards;
+  animation-delay: 1.4s;
+  }
+  @-webkit-keyframes par_back_anim{
+  0%{}
+  100%{ left: 0;}
+  }
+#carousel figcaption p>span{
+  display: block;
+  position: relative;
+  left: -50px;
+  letter-spacing: -20px;
+  -webkit-animation: ease-out 2s par_anim;
+  animation-fill-mode: forwards;
+  animation-delay: 1.4s;
+}
+@-webkit-keyframes par_anim{
+0%{}
+100%{left: 0; letter-spacing: -0.5px;}
+}
+/****************************FIGCAPTION HREF***********************/
+#carousel figcaption a{
+  overflow: hidden;
+  position: absolute;
+  left: 60px;
+  bottom: 35px;
+  font-family: arial;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+  text-shadow: 1px 1px 1px black;
+  -webkit-animation: ease-out 2s ref_anim;
+  animation-fill-mode: forwards;
+  animation-delay: 1.4s;
+}
+@-webkit-keyframes ref_anim{
+  0%{}
+  100%{left: 35px;}
+}
+#carousel figcaption a>span{
+  position: relative;
+  left: -100px;
+  -webkit-animation: ease-out 2s back_ref_anim;
+  animation-fill-mode: forwards;
+  animation-delay: 1.4s
+}
+@-webkit-keyframes back_ref_anim{
+  0%{}
+  100%{left: 0;}
+}
+/*******************АНИМАЦИЯ РАМКИ*************************/
+#carousel figcaption div:nth-child(4){
+  height: 3px;
+  background-color: #cee002;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: ease-out 0.7s top;
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes top{
+  0%{width: 0;}
+  100%{width: 170px;}
+}
+#carousel figcaption div:nth-child(5){
+  width: 3px;
+  background-color: #cee002;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-animation: ease-out 0.7s right;
+  animation-delay: 0.7s;
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes right{
+  0%{height: 0;}
+  100%{height: 350px;}
+}
+#carousel figcaption div:nth-child(6){
+  height: 3px;
+  background-color: #cee002;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  -webkit-animation: ease-out 0.7s bottom;
+  animation-delay: 1.4s;
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes bottom{
+  0%{width: 0;}
+  100%{width: 170px;}
+}
+#carousel figcaption div:nth-child(7){
+  width: 3px;
+  background-color: #cee002;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-animation: ease-out 0.7s left;
+  animation-delay: 2.1s;
+  animation-fill-mode: forwards;
+  }
+  @-webkit-keyframes left{
+  0%{height: 0;}
+  100%{height: 350px;}
+  }
+/***********************************************************************/
